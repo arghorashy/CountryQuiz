@@ -11,5 +11,13 @@
 @interface Profile : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *clist;
+@property (nonatomic, strong) NSMutableArray *countryList;
+@property (nonatomic) int numOfCountries;
+
+- (void)saveData;
+
+- (NSString *)getNextQuestion;
+
+- (void)skipped:(NSString *)country;
 
 @end

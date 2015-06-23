@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Profile.h"
+#import "QuizViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

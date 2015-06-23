@@ -27,7 +27,7 @@
     
     NSLog(@"%@", self.clist);
     
-    // Update missing countries
+    // Update missing countries in clist
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"csv"];
     NSString *fileContents = [NSString stringWithContentsOfFile:filePath];
     
@@ -39,7 +39,6 @@
         {
             NSMutableDictionary *c = [[NSMutableDictionary alloc] init];
             [c setValue:items[1] forKey:@"continent"];
-            [c setValue:[NSNumber numberWithInt:0] forKey:@"tries"];
             [c setValue:[NSNumber numberWithInt:0] forKey:@"wins"];
             [c setValue:[NSNumber numberWithInt:0] forKey:@"losses"];
             [c setValue:[NSNumber numberWithInt:0] forKey:@"skips"];
@@ -48,16 +47,41 @@
         }
     }
     
+    // Construct countryList and numOfCountries
+    self.countryList = [[NSMutableArray alloc] init];
+    for (NSString *key in self.clist)
+    {
+        NSLog(@"essai: %@", key);
+        [self.countryList addObject:key];
+        self.numOfCountries++;
+    }
     
     // Save data
-    [[NSUserDefaults standardUserDefaults] setObject:self.clist forKey:@"clist"];
+    [self saveData];
 
-    
-
-    
-
-    
     return self;
+}
+
+- (void)saveData
+{
+    [[NSUserDefaults standardUserDefaults] setObject:self.clist forKey:@"clist"];
+}
+
+- (NSString *)getNextQuestion
+{
+    
+    //NSLog(@"essai: %d", arc4random() % self.numOfCountries);
+    //NSLog(@"essai: %@", self.countryList[1]);
+    return self.countryList[arc4random() % self.numOfCountries];
+}
+
+- (void)skipped:(NSString *)country
+{
+    if (country == nil) return;
+    NSInteger number = [[[self.clist objectForKey:country] objectForKey:@"skips"] integerValue];
+    number+=1;
+    [self.clist[country] setValue:[NSNumber numberWithInt:number] forKey:@"skips"];
+
     
 }
 

@@ -20,9 +20,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-
-    
     Profile *p = [[Profile alloc] init ];
+    
+    // ??
+    // This will get a pointer to an object that represents the app bundle
+    NSBundle *appBundle = [NSBundle mainBundle];
+    
+    // Initialise ReminderViewController
+    QuizViewController *qvc = [[QuizViewController alloc] initWithNibName:@"QuizViewController"
+                                                                   bundle:appBundle
+                                                                  profile:p];
+    
+    
+    // Set the rootViewController to a given ViewController to present that view on startup.
+    self.window.rootViewController = qvc;
+    
+    // Alternatively, set the rootViewController to a TabBarController that contains all of your ViewControllers
+    //UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    //tabBarController.viewControllers = @[hvc, rvc];
+    //self.window.rootViewController = tabBarController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
