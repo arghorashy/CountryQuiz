@@ -17,15 +17,15 @@
         // NSString *filePathDictionary = [documents[0] stringByAppendingPathComponent:@"profile.plist"];
         //self.clist = [NSMutableDictionary dictionaryWithContentsOfFile:filePathDictionary];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    self.clist = [[userDefaults dictionaryForKey:@"clist"] mutableCopy];
+    self.countries = [[userDefaults dictionaryForKey:@"clist"] mutableCopy];
     
     // If no saved data, init with empty object.
-    if (!self.clist)
+    if (!self.countries)
     {
-        self.clist = [[NSMutableDictionary alloc] init];
+        self.countries = [[NSMutableDictionary alloc] init];
     }
     
-    NSLog(@"%@", self.clist);
+    NSLog(@"%@", self.countries);
     
     // Update missing countries in clist
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"csv"];
@@ -35,7 +35,7 @@
     {
         NSArray *items = [line componentsSeparatedByString:@","];
         if ([items count] < 2) break;
-        if ([self.clist objectForKey:items[0]] == nil)
+        if ([self.countries objectForKey:items[0]] == nil)
         {
             NSMutableDictionary *c = [[NSMutableDictionary alloc] init];
             [c setValue:items[1] forKey:@"continent"];
@@ -43,13 +43,13 @@
             [c setValue:[NSNumber numberWithInt:0] forKey:@"losses"];
             [c setValue:[NSNumber numberWithInt:0] forKey:@"skips"];
 
-            [self.clist setValue:c forKey:items[0]];
+            [self.countries setValue:c forKey:items[0]];
         }
     }
     
     // Construct countryList and numOfCountries
     self.countryList = [[NSMutableArray alloc] init];
-    for (NSString *key in self.clist)
+    for (NSString *key in self.countries)
     {
         NSLog(@"essai: %@", key);
         [self.countryList addObject:key];
@@ -64,7 +64,7 @@
 
 - (void)saveData
 {
-    [[NSUserDefaults standardUserDefaults] setObject:self.clist forKey:@"clist"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.countries forKey:@"clist"];
 }
 
 - (NSString *)getNextQuestion
@@ -78,18 +78,18 @@
 - (void)skipped:(NSString *)country
 {
     if (country == nil) return;
-    NSInteger number = [[[self.clist objectForKey:country] objectForKey:@"skips"] integerValue];
+    NSInteger number = [[[self.countries objectForKey:country] objectForKey:@"skips"] integerValue];
     number+=1;
-    [self.clist[country] setValue:[NSNumber numberWithInt:number] forKey:@"skips"];
+    [self.countries[country] setValue:[NSNumber numberWithInt:number] forKey:@"skips"];
 
 }
 
 - (void)answeredRight:(NSString *)country
 {
     if (country == nil) return;
-    NSInteger number = [[[self.clist objectForKey:country] objectForKey:@"wins"] integerValue];
+    NSInteger number = [[[self.countries objectForKey:country] objectForKey:@"wins"] integerValue];
     number+=1;
-    [self.clist[country] setValue:[NSNumber numberWithInt:number] forKey:@"wins"];
+    [self.countries[country] setValue:[NSNumber numberWithInt:number] forKey:@"wins"];
     
 }
 
@@ -97,9 +97,9 @@
 {
 
     if (country == nil) return;
-    NSInteger number = [[[self.clist objectForKey:country] objectForKey:@"losses"] integerValue];
+    NSInteger number = [[[self.countries objectForKey:country] objectForKey:@"losses"] integerValue];
     number+=1;
-    [self.clist[country] setValue:[NSNumber numberWithInt:number] forKey:@"losses"];
+    [self.countries[country] setValue:[NSNumber numberWithInt:number] forKey:@"losses"];
     
 }
 

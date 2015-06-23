@@ -27,7 +27,8 @@
     // N.B. Added here to intercept enter press in UITextField
     self.answerText.delegate = self;
     
-    // [self loadQuestion];
+    // If I do this without the "performSelector", the entire view loads incorrectly!  Why?
+    [self performSelector:@selector(loadQuestion) withObject:nil afterDelay:0.0];
 }
 
 // N.B. Added here to intercept enter press in UITextField
@@ -79,8 +80,7 @@
 
 - (void)validateAnswer
 {
-    NSLog([self.answerText.text lowercaseString]);
-    NSLog([self.last lowercaseString]);
+
     if ([[self.answerText.text lowercaseString] isEqualToString:[self.last lowercaseString]])
     {
         [self.profile answeredRight:self.last];
@@ -89,7 +89,8 @@
         self.feedbackLabel.backgroundColor = [UIColor greenColor];
         self.feedbackLabel.textColor = [UIColor whiteColor];
         
-        [self performSelector:@selector(resetAfterQuestion) withObject:nil afterDelay:2.0];
+        [self performSelector:@selector(resetAfterQuestion) withObject:nil afterDelay:0.5];
+        [self performSelector:@selector(loadQuestion) withObject:nil afterDelay:0.5];
         
     }
     else
@@ -101,11 +102,11 @@
         self.feedbackLabel.textColor = [UIColor whiteColor];
         
         [self performSelector:@selector(resetAfterQuestion) withObject:nil afterDelay:2.0];
+        [self performSelector:@selector(loadQuestion) withObject:nil afterDelay:2.0];
         
         
     }
 
-    [self performSelector:@selector(loadQuestion) withObject:nil afterDelay:2.0];
     
 }
 
