@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController">
             <connections>
+                <outlet property="answerText" destination="oYS-Np-E91" id="YNp-M0-euo"/>
                 <outlet property="countryImage" destination="2e8-yb-E1E" id="Aep-m6-jdj"/>
+                <outlet property="feedbackLabel" destination="0rI-KA-D6n" id="8Z9-ra-jD4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,13 +20,13 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-yb-E1E">
                     <rect key="frame" x="23" y="67" width="274" height="218"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYS-Np-E91">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oYS-Np-E91">
                     <rect key="frame" x="47" y="408" width="226" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rI-KA-D6n">
-                    <rect key="frame" x="67" y="340" width="187" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0rI-KA-D6n">
+                    <rect key="frame" x="47" y="340" width="226" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="aQR-Uo-TQs"/>
                     </constraints>
@@ -56,7 +58,7 @@
                 <constraint firstItem="oYS-Np-E91" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="47" id="Xmm-JI-5vL"/>
                 <constraint firstItem="BDq-QY-onG" firstAttribute="top" secondItem="oYS-Np-E91" secondAttribute="bottom" constant="33" id="Z45-he-lUF"/>
                 <constraint firstItem="0rI-KA-D6n" firstAttribute="centerX" secondItem="2e8-yb-E1E" secondAttribute="centerX" id="dTW-aD-r1s"/>
-                <constraint firstItem="0rI-KA-D6n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="67" id="v7v-7V-xkm"/>
+                <constraint firstItem="0rI-KA-D6n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="47" id="v7v-7V-xkm"/>
                 <constraint firstItem="2e8-yb-E1E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="wEg-tE-i4m"/>
                 <constraint firstItem="BDq-QY-onG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zFN-0R-BmU"/>
             </constraints>

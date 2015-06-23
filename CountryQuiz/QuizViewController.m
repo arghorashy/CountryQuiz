@@ -12,7 +12,9 @@
 
 @property (nonatomic) NSString *last;
 @property (nonatomic, weak) IBOutlet UIImageView *countryImage;
-@property (nonatomic) Profile *p;
+@property (nonatomic, weak) IBOutlet UITextField *answerText;
+@property (nonatomic, weak) IBOutlet UILabel *feedbackLabel;
+@property (nonatomic) Profile *profile;
 
 @end
 
@@ -22,7 +24,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    // N.B. Added here to intercept enter press in UITextField
+    self.answerText.delegate = self;
+    
     // [self loadQuestion];
+}
+
+// N.B. Added here to intercept enter press in UITextField
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField
+{
+    if (theTextField == self.answerText)
+    {
+        [theTextField resignFirstResponder];
+        [self validateAnswer];
+    }
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +53,7 @@
     
     while (name == nil || name == self.last)
     {
-        name = [self.p getNextQuestion];
+        name = [self.profile getNextQuestion];
     }
     
     self.last = name;
@@ -48,9 +64,52 @@
 
 - (IBAction)skipQuestion:(id)sender
 {
-    [self.p skipped:self.last];
+    [self.profile skipped:self.last];
     [self loadQuestion];
 }
+
+- (void)resetAfterQuestion
+{
+    self.feedbackLabel.text = @"";
+    self.feedbackLabel.backgroundColor = [UIColor clearColor];
+    self.feedbackLabel.textColor = [UIColor clearColor];
+    
+    self.answerText.text = @"";
+}
+
+- (void)validateAnswer
+{
+    NSLog([self.answerText.text lowercaseString]);
+    NSLog([self.last lowercaseString]);
+    if ([[self.answerText.text lowercaseString] isEqualToString:[self.last lowercaseString]])
+    {
+        [self.profile answeredRight:self.last];
+        
+        self.feedbackLabel.text = @"Correct!";
+        self.feedbackLabel.backgroundColor = [UIColor greenColor];
+        self.feedbackLabel.textColor = [UIColor whiteColor];
+        
+        [self performSelector:@selector(resetAfterQuestion) withObject:nil afterDelay:2.0];
+        
+    }
+    else
+    {
+        [self.profile answeredWrong:self.last];
+        
+        self.feedbackLabel.text = [NSString stringWithFormat:@"The right answer is %@.", self.last];
+        self.feedbackLabel.backgroundColor = [UIColor redColor];
+        self.feedbackLabel.textColor = [UIColor whiteColor];
+        
+        [self performSelector:@selector(resetAfterQuestion) withObject:nil afterDelay:2.0];
+        
+        
+    }
+
+    [self performSelector:@selector(loadQuestion) withObject:nil afterDelay:2.0];
+    
+}
+
+
 
 -  (instancetype)initWithNibName:(NSString *)nibname
                           bundle:(NSBundle *)bundle
@@ -59,7 +118,7 @@
     self = [super initWithNibName:nibname
                            bundle:bundle];
     
-    self.p = p;
+    self.profile = p;
     
     return self;
 }

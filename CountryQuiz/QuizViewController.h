@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Profile.h"
 
-@interface QuizViewController : UIViewController
+@interface QuizViewController : UIViewController <UITextFieldDelegate>
+// N.B. Added delegate to intercept enter press in UITextField
+
+
 
 -  (instancetype)initWithNibName:(NSString *)nibname
                           bundle:(NSBundle *)bundle
                          profile:(Profile *)p;
+
+- (void)resetAfterQuestion;
 
 @end

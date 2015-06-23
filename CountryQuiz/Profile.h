@@ -20,4 +20,8 @@
 
 - (void)skipped:(NSString *)country;
 
+- (void)answeredRight:(NSString *)country;
+
+- (void)answeredWrong:(NSString *)country;
+
 @end

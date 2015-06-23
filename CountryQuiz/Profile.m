@@ -82,6 +82,24 @@
     number+=1;
     [self.clist[country] setValue:[NSNumber numberWithInt:number] forKey:@"skips"];
 
+}
+
+- (void)answeredRight:(NSString *)country
+{
+    if (country == nil) return;
+    NSInteger number = [[[self.clist objectForKey:country] objectForKey:@"wins"] integerValue];
+    number+=1;
+    [self.clist[country] setValue:[NSNumber numberWithInt:number] forKey:@"wins"];
+    
+}
+
+- (void)answeredWrong:(NSString *)country
+{
+
+    if (country == nil) return;
+    NSInteger number = [[[self.clist objectForKey:country] objectForKey:@"losses"] integerValue];
+    number+=1;
+    [self.clist[country] setValue:[NSNumber numberWithInt:number] forKey:@"losses"];
     
 }
 
