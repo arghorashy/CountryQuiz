@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60C3B1041B3A241100C5DF54 /* MCBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B0F71B3A241100C5DF54 /* MCBarChartView.m */; };
+		60C3B1051B3A241100C5DF54 /* MCBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B0F91B3A241100C5DF54 /* MCBarLayer.m */; };
+		60C3B1061B3A241100C5DF54 /* MCNewCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B0FC1B3A241100C5DF54 /* MCNewCustomLayer.m */; };
+		60C3B1071B3A241100C5DF54 /* MCNewCustomLayeredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B0FE1B3A241100C5DF54 /* MCNewCustomLayeredView.m */; };
+		60C3B1081B3A241100C5DF54 /* MCSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B1011B3A241100C5DF54 /* MCSliceLayer.m */; };
+		60C3B1091B3A241100C5DF54 /* MCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B1031B3A241100C5DF54 /* MCUtil.m */; };
+		60C3B10B1B3A248300C5DF54 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B10A1B3A248300C5DF54 /* QuartzCore.framework */; };
+		60C3B10F1B3A24CE00C5DF54 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B10D1B3A24CE00C5DF54 /* StatsViewController.m */; };
+		60C3B1101B3A24CE00C5DF54 /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C3B10E1B3A24CE00C5DF54 /* StatsViewController.xib */; };
 		60D875661B38DE1E0015F9BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D875651B38DE1E0015F9BC /* main.m */; };
 		60D875691B38DE1E0015F9BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D875681B38DE1E0015F9BC /* AppDelegate.m */; };
 		60D8756C1B38DE1E0015F9BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D8756B1B38DE1E0015F9BC /* ViewController.m */; };
@@ -36,6 +45,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60C3B0F61B3A241100C5DF54 /* MCBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBarChartView.h; sourceTree = "<group>"; };
+		60C3B0F71B3A241100C5DF54 /* MCBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBarChartView.m; sourceTree = "<group>"; };
+		60C3B0F81B3A241100C5DF54 /* MCBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBarLayer.h; sourceTree = "<group>"; };
+		60C3B0F91B3A241100C5DF54 /* MCBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBarLayer.m; sourceTree = "<group>"; };
+		60C3B0FA1B3A241100C5DF54 /* MCCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCore.h; sourceTree = "<group>"; };
+		60C3B0FB1B3A241100C5DF54 /* MCNewCustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayer.h; sourceTree = "<group>"; };
+		60C3B0FC1B3A241100C5DF54 /* MCNewCustomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewCustomLayer.m; sourceTree = "<group>"; };
+		60C3B0FD1B3A241100C5DF54 /* MCNewCustomLayeredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewCustomLayeredView.h; sourceTree = "<group>"; };
+		60C3B0FE1B3A241100C5DF54 /* MCNewCustomLayeredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewCustomLayeredView.m; sourceTree = "<group>"; };
+		60C3B0FF1B3A241100C5DF54 /* MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h"; sourceTree = "<group>"; };
+		60C3B1001B3A241100C5DF54 /* MCSliceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSliceLayer.h; sourceTree = "<group>"; };
+		60C3B1011B3A241100C5DF54 /* MCSliceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSliceLayer.m; sourceTree = "<group>"; };
+		60C3B1021B3A241100C5DF54 /* MCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtil.h; sourceTree = "<group>"; };
+		60C3B1031B3A241100C5DF54 /* MCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtil.m; sourceTree = "<group>"; };
+		60C3B10A1B3A248300C5DF54 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		60C3B10C1B3A24CE00C5DF54 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		60C3B10D1B3A24CE00C5DF54 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		60C3B10E1B3A24CE00C5DF54 /* StatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
 		60D875601B38DE1E0015F9BC /* CountryQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D875641B38DE1E0015F9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60D875651B38DE1E0015F9BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C3B10B1B3A248300C5DF54 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,9 +109,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60C3B0F51B3A23F900C5DF54 /* BarChartView */ = {
+			isa = PBXGroup;
+			children = (
+				60C3B0F61B3A241100C5DF54 /* MCBarChartView.h */,
+				60C3B0F71B3A241100C5DF54 /* MCBarChartView.m */,
+				60C3B0F81B3A241100C5DF54 /* MCBarLayer.h */,
+				60C3B0F91B3A241100C5DF54 /* MCBarLayer.m */,
+				60C3B0FA1B3A241100C5DF54 /* MCCore.h */,
+				60C3B0FB1B3A241100C5DF54 /* MCNewCustomLayer.h */,
+				60C3B0FC1B3A241100C5DF54 /* MCNewCustomLayer.m */,
+				60C3B0FD1B3A241100C5DF54 /* MCNewCustomLayeredView.h */,
+				60C3B0FE1B3A241100C5DF54 /* MCNewCustomLayeredView.m */,
+				60C3B0FF1B3A241100C5DF54 /* MCNewCustomLayeredView+MCCustomLayeredViewSubclass.h */,
+				60C3B1001B3A241100C5DF54 /* MCSliceLayer.h */,
+				60C3B1011B3A241100C5DF54 /* MCSliceLayer.m */,
+				60C3B1021B3A241100C5DF54 /* MCUtil.h */,
+				60C3B1031B3A241100C5DF54 /* MCUtil.m */,
+			);
+			name = BarChartView;
+			sourceTree = "<group>";
+		};
 		60D875571B38DE1D0015F9BC = {
 			isa = PBXGroup;
 			children = (
+				60C3B10A1B3A248300C5DF54 /* QuartzCore.framework */,
 				60D875621B38DE1E0015F9BC /* CountryQuiz */,
 				60D8757C1B38DE1E0015F9BC /* CountryQuizTests */,
 				60D875611B38DE1E0015F9BC /* Products */,
@@ -102,6 +152,10 @@
 		60D875621B38DE1E0015F9BC /* CountryQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				60C3B10C1B3A24CE00C5DF54 /* StatsViewController.h */,
+				60C3B10D1B3A24CE00C5DF54 /* StatsViewController.m */,
+				60C3B10E1B3A24CE00C5DF54 /* StatsViewController.xib */,
+				60C3B0F51B3A23F900C5DF54 /* BarChartView */,
 				60D875671B38DE1E0015F9BC /* AppDelegate.h */,
 				60D875681B38DE1E0015F9BC /* AppDelegate.m */,
 				60D875951B38E5AE0015F9BC /* Profile.h */,
@@ -250,6 +304,7 @@
 			files = (
 				60D8758F1B38E09E0015F9BC /* index.csv in Resources */,
 				60D8756F1B38DE1E0015F9BC /* Main.storyboard in Resources */,
+				60C3B1101B3A24CE00C5DF54 /* StatsViewController.xib in Resources */,
 				60D8759F1B39064D0015F9BC /* QuizViewController.xib in Resources */,
 				60D875941B38E2A70015F9BC /* date.txt in Resources */,
 				60D875921B38E09E0015F9BC /* Algeria.png in Resources */,
@@ -275,9 +330,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D8759A1B38F1BD0015F9BC /* NSDictionary+JSON.m in Sources */,
+				60C3B1071B3A241100C5DF54 /* MCNewCustomLayeredView.m in Sources */,
+				60C3B1051B3A241100C5DF54 /* MCBarLayer.m in Sources */,
+				60C3B1061B3A241100C5DF54 /* MCNewCustomLayer.m in Sources */,
 				60D875971B38E5AE0015F9BC /* Profile.m in Sources */,
+				60C3B1091B3A241100C5DF54 /* MCUtil.m in Sources */,
+				60C3B1081B3A241100C5DF54 /* MCSliceLayer.m in Sources */,
 				60D8756C1B38DE1E0015F9BC /* ViewController.m in Sources */,
 				60D875691B38DE1E0015F9BC /* AppDelegate.m in Sources */,
+				60C3B1041B3A241100C5DF54 /* MCBarChartView.m in Sources */,
+				60C3B10F1B3A24CE00C5DF54 /* StatsViewController.m in Sources */,
 				60D875661B38DE1E0015F9BC /* main.m in Sources */,
 				60D8759E1B39064D0015F9BC /* QuizViewController.m in Sources */,
 			);
@@ -474,6 +536,7 @@
 				60D875851B38DE1E0015F9BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60D875861B38DE1E0015F9BC /* Build configuration list for PBXNativeTarget "CountryQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +545,7 @@
 				60D875881B38DE1E0015F9BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

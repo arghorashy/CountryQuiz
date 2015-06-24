@@ -24,4 +24,6 @@
 
 - (void)answeredWrong:(NSString *)country;
 
+- (NSMutableDictionary*)generateSummary;
+
 @end

@@ -31,14 +31,17 @@
                                                                    bundle:appBundle
                                                                   profile:p];
     
+    // Initialise StatsViewController
+    StatsViewController *svc = [[StatsViewController alloc] initWithNibName:@"StatsViewController"
+                                                                     bundle:appBundle
+                                                                    profile:p];
     
-    // Set the rootViewController to a given ViewController to present that view on startup.
-    self.window.rootViewController = qvc;
+    
     
     // Alternatively, set the rootViewController to a TabBarController that contains all of your ViewControllers
-    //UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    //tabBarController.viewControllers = @[hvc, rvc];
-    //self.window.rootViewController = tabBarController;
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[qvc, svc];
+    self.window.rootViewController = tabBarController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
