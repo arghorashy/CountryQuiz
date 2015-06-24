@@ -16,6 +16,8 @@
 		60C3B10B1B3A248300C5DF54 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B10A1B3A248300C5DF54 /* QuartzCore.framework */; };
 		60C3B10F1B3A24CE00C5DF54 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B10D1B3A24CE00C5DF54 /* StatsViewController.m */; };
 		60C3B1101B3A24CE00C5DF54 /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C3B10E1B3A24CE00C5DF54 /* StatsViewController.xib */; };
+		60C3B1131B3A50F900C5DF54 /* earth.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C3B1121B3A50F900C5DF54 /* earth.png */; };
+		60C3B1151B3A516400C5DF54 /* pie.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C3B1141B3A516400C5DF54 /* pie.png */; };
 		60D875661B38DE1E0015F9BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D875651B38DE1E0015F9BC /* main.m */; };
 		60D875691B38DE1E0015F9BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D875681B38DE1E0015F9BC /* AppDelegate.m */; };
 		60D8756C1B38DE1E0015F9BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D8756B1B38DE1E0015F9BC /* ViewController.m */; };
@@ -63,6 +65,8 @@
 		60C3B10C1B3A24CE00C5DF54 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		60C3B10D1B3A24CE00C5DF54 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		60C3B10E1B3A24CE00C5DF54 /* StatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
+		60C3B1121B3A50F900C5DF54 /* earth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = earth.png; path = "../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/earth.png"; sourceTree = "<group>"; };
+		60C3B1141B3A516400C5DF54 /* pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pie.png; path = "../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/pie.png"; sourceTree = "<group>"; };
 		60D875601B38DE1E0015F9BC /* CountryQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D875641B38DE1E0015F9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60D875651B38DE1E0015F9BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 			name = BarChartView;
 			sourceTree = "<group>";
 		};
+		60C3B1111B3A50E800C5DF54 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				60C3B1141B3A516400C5DF54 /* pie.png */,
+				60C3B1121B3A50F900C5DF54 /* earth.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		60D875571B38DE1D0015F9BC = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +191,7 @@
 		60D875631B38DE1E0015F9BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				60C3B1111B3A50E800C5DF54 /* Icons */,
 				60D875891B38E09E0015F9BC /* Countries */,
 				60D875641B38DE1E0015F9BC /* Info.plist */,
 				60D875651B38DE1E0015F9BC /* main.m */,
@@ -304,6 +318,8 @@
 			files = (
 				60D8758F1B38E09E0015F9BC /* index.csv in Resources */,
 				60D8756F1B38DE1E0015F9BC /* Main.storyboard in Resources */,
+				60C3B1131B3A50F900C5DF54 /* earth.png in Resources */,
+				60C3B1151B3A516400C5DF54 /* pie.png in Resources */,
 				60C3B1101B3A24CE00C5DF54 /* StatsViewController.xib in Resources */,
 				60D8759F1B39064D0015F9BC /* QuizViewController.xib in Resources */,
 				60D875941B38E2A70015F9BC /* date.txt in Resources */,

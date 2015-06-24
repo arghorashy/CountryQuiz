@@ -129,7 +129,19 @@
     self = [super initWithNibName:nibname
                            bundle:bundle];
     
-    self.profile = p;
+    if (self) {
+        self.profile = p;
+        
+        // Get the tab bar item
+        UITabBarItem *tbi = self.tabBarItem;
+        
+        // Give it a label
+        tbi.title = @"Stats";
+        
+        // Give it an image
+        UIImage *i = [UIImage imageNamed:@"Pie.png"];
+        tbi.image = i;
+    }
     
     return self;
 }
