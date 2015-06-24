@@ -13,9 +13,6 @@
 - (instancetype)init
 {
     // Load saved data
-        // NSArray *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        // NSString *filePathDictionary = [documents[0] stringByAppendingPathComponent:@"profile.plist"];
-        //self.clist = [NSMutableDictionary dictionaryWithContentsOfFile:filePathDictionary];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     self.countries = [[userDefaults dictionaryForKey:@"clist"] mutableCopy];
     
@@ -24,8 +21,6 @@
     {
         self.countries = [[NSMutableDictionary alloc] init];
     }
-    
-    NSLog(@"%@", self.countries);
     
     // Update missing countries in self.countries
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"csv"];
@@ -62,6 +57,7 @@
     return self;
 }
 
+// Generate summary including number of successes and fails for each continent
 - (NSMutableDictionary*)generateSummary
 {
     NSMutableDictionary *summary = [[NSMutableDictionary alloc ] init];
@@ -106,9 +102,6 @@
 
 - (NSString *)getNextQuestion
 {
-    
-    //NSLog(@"essai: %d", arc4random() % self.numOfCountries);
-    //NSLog(@"essai: %@", self.countryList[1]);
     return self.countryList[arc4random() % self.numOfCountries];
 }
 
@@ -136,7 +129,6 @@
 
 - (void)answeredWrong:(NSString *)country
 {
-
     if (country == nil) return;
     NSInteger number = [[[self.countries objectForKey:country] objectForKey:@"losses"] integerValue];
     number+=1;
@@ -146,12 +138,5 @@
     
 }
 
-
-
-
-
-// assume a filename of file.txt. Update as needed
-
-//NSLog(filePath);
 
 @end

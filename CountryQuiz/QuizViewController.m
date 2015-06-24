@@ -83,27 +83,30 @@
 
     if ([[self.answerText.text lowercaseString] isEqualToString:[self.last lowercaseString]])
     {
+        // Add to statistics
         [self.profile answeredRight:self.last];
         
         self.feedbackLabel.text = @"Correct!";
         self.feedbackLabel.backgroundColor = [UIColor greenColor];
         self.feedbackLabel.textColor = [UIColor whiteColor];
         
+        // Reset after showing "correct" banner and load new question.
         [self performSelector:@selector(resetAfterQuestion) withObject:nil afterDelay:0.5];
         [self performSelector:@selector(loadQuestion) withObject:nil afterDelay:0.5];
         
     }
     else
     {
+        // Add to statistics
         [self.profile answeredWrong:self.last];
         
         self.feedbackLabel.text = [NSString stringWithFormat:@"The right answer is %@.", self.last];
         self.feedbackLabel.backgroundColor = [UIColor redColor];
         self.feedbackLabel.textColor = [UIColor whiteColor];
         
+        // Reset after showing "wrong!" banner and load new question.
         [self performSelector:@selector(resetAfterQuestion) withObject:nil afterDelay:2.0];
         [self performSelector:@selector(loadQuestion) withObject:nil afterDelay:2.0];
-        
         
     }
 

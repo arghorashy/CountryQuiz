@@ -34,8 +34,6 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    //[super viewDidAppear:true];
-    
     [self updateBarChart];
 }
 
@@ -44,16 +42,14 @@
     // set the interface main color
     self.mainColor = [UIColor grayColor];
     
-    // starts with the first column selected
-    //selectedIndex = 0;
-    
     self.profileSummary = [self.profile generateSummary];
     
     // Both indexed the same way
-    self.chartValues = [[NSMutableArray alloc] init];
-    self.continents = [[self.profileSummary allKeys]
+    self.chartValues = [[NSMutableArray alloc] init];  // Success percentages per continent
+    self.continents = [[self.profileSummary allKeys]   // Sorted list of continent names
                        sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 
+    // Calculate success percentage per continent
     for (NSString *continent in self.continents)
     {
         float success = [[self.profileSummary valueForKeyPath:
