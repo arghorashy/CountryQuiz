@@ -1,6 +1,6 @@
 This app is for all those who fall for it when John Oliver points to a country's silhouette, mentioning another country's name.
 
-The premise is simple, the app will show silhouettes of countries and the user must enter its name.  The app allows you to keep track of how well you know each continent.  Currently the number of available countries is very limited, a simple Wikipedia scraper could quickly complete the set.
+The premise is simple: the app will show silhouettes of countries and the user must enter its name.  The app allows you to keep track of how well you know each continent.  Currently the number of available countries is very limited - a simple Wikipedia scraper could quickly complete the set.
 
 Clearly many competitors exist for this app (especially the versatile Anki), but this project is only intended as a first stab at iOS development.
 
